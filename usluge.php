@@ -64,5 +64,48 @@
       </div>
    </section>
 
+   </div>
+<div id="delete-product-modal" class="modal fade">
+ <div class="modal-dialog modal-dialog-centered modal-confirm">
+   <div class="modal-content">
+     <div class="modal-header flex-column">
+       <h4 class="modal-title w-100">Are you sure?</h4>
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <p>Do you really want to delete this product? This process cannot be undone.</p>
+     </div>
+     <div class="modal-footer justify-content-center">
+        <form action="functions/deleteProduct.php" method="post">
+           <input type="hidden" name="productId" id="productId">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+           <button type="submit" name="deleteProductBtn" class="btn btn-danger text-center">Delete</button>
+        </form>
+     </div>
+   </div>
+ </div>
+</div>
+<script type="text/javascript">
+   function filterProducts(){
+      var namePrice = $("#namePrice").val();
+      var lowHigh = $("#lowHigh").val();
+      $.ajax({
+         url: "functions/getProducts.php",
+         method:"POST",
+         data:{namePrice:namePrice,
+               lowHigh: lowHigh},
+         success: function(data){
+            $("#productsTable tbody").html(data);
+         },
+         error: function(xhr, status, error) {
+            console.log(error);
+          }
+      })
+   }
+   function resetProducts(){
+      var result ="<?php getProducts(); ?>"
+      $("#productsTable tbody").html(result);
+   }
+   resetProducts();
 </script>
 <?php include("includes/footer.php") ?>

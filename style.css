@@ -581,6 +581,208 @@ li.nav-item::marker {
 .baguetteBox-button:focus {
   outline: none !important;
 }
+/* Login */
+.login {
+  display: block;
+  position: relative;
+  background: grey;
+  min-height: 100vh;
+}
+
+@media only screen and (min-height: 736px) {
+  .login {
+    height: 100%;
+  }
+}
+
+.login-card {
+  margin-top: 60px;
+}
+
+.login .container {
+  padding: 13rem 0;
+}
+
+/* Kontakt */
+.contact-us-section {
+  display: block;
+  position: relative;
+  background: #50685a;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.contact-us-section .container {
+  padding: 12rem 0 3rem;
+}
+
+.contact-us-section .bg-image {
+  background: url(../images/contact-us.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.contactDiv {
+  color:#254549;
+  font-weight: 300;
+  padding: 60px 0;
+}
+
+.contactDiv h1,
+.contactDiv h2,
+.contactDiv h3,
+.contactDiv h4,
+.contactDiv h5,
+.contactDiv h6 {
+  color: #3366cc;
+}
+
+.contactDiv .font-weight-medium {
+  font-weight: 500;
+}
+
+.contactDiv .subtitle {
+  color:#3366cc;
+  line-height: 24px;
+}
+
+.contactDiv .bg-image {
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactDiv .card.card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.contactDiv .detail-box .round-social {
+  margin-top: 100px;
+}
+
+.contactDiv .round-social a {
+  background: transparent;
+  margin: 0 5px;
+}
+
+.round-social a.facebook:hover {
+  background-color: #3b5998;
+}
+
+.round-social a.facebook {
+  padding: 0.7rem 1.1rem;
+}
+
+.round-social a.twitter:hover {
+  background-color: #00aced;
+}
+
+.round-social a.twitter {
+  padding: 0.7rem 0.9rem;
+}
+
+.round-social a.instagram:hover {
+  background-color: #e1306c;
+}
+
+.round-social a.instagram {
+  padding: 0.7rem 0.9rem;
+}
+
+.round-social a.youtube:hover {
+  background-color: #ff0000;
+}
+
+.round-social a.youtube {
+  padding: 0.7rem 0.8rem;
+}
+
+.contactDiv .contact-container .links a {
+  color: black;
+}
+
+/* Dodaj Proizvod */
+.proizvodi {
+  position: relative;
+  min-height: 100vh;
+}
+
+.proizvodi .card-header {
+  border-bottom: none;
+  border-top: none;
+  background-color: transparent;
+}
+
+.proizvodi .card {
+  background-color: #6db2bc;
+  border-radius: 10px;
+  border: 1px solid #254549;
+  box-shadow: rgb(37 60 75) 0px 0px 2em !important;
+}
+
+.proizvodi-banner {
+  background: url(../images/proizvodi-baner.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.proizvodi-banner .container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.proizvodi-banner .background-wrapper {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(75, 142, 188, 1) 100%);
+}
+
+.proizvodi .wrapper {
+  background-color: transparent;
+}
+
+.proizvodi-content {
+  height: 100%;
+  background: -moz-linear-gradient(180deg, rgba(75, 142, 188, 1) 0%, rgba(191, 224, 239, 1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(75, 142, 188, 1) 0%, rgba(191, 224, 239, 1) 100%);
+  background: linear-gradient(180deg, rgba(75, 142, 188, 1) 0%, rgba(191, 224, 239, 1) 100%);
+}
+
+.proizvodi .proizvodi-body .navbarWrapper {
+  position: absolute;
+  width: 100%;
+  top: -52px;
+}
+
+.proizvodi .proizvodi-body {
+  position: relative;
+}
+
+.proizvodi .proizvodi-container {
+  padding: 3rem 0;
+}
+
+@media (min-width: 767px) {
+  .proizvodi-banner h1 {
+    padding-top: 80px;
+    font-weight: 900;
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .proizvodi-banner h1 {
+    padding-top: 80px;
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+}
 
 
 

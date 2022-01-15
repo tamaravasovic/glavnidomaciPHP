@@ -10,9 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $_SESSION['messageError'] = "Sva polja moraju biti popunjena!";
         redirect("../usluge.php");
     }
-    $sql = "INSERT INTO oprema(naziv, cena, vrstaId, velicinaId)";
-    $sql.= "VALUES('$NazivProizvoda','$Cena','$Vrsta','$Velicina')";
-    $result = query($sql);
+    include("../proizvod.php");
+    $proizvod = new Proizvod();
+    $result = $proizvod->sacuvajProizvod($NazivProizvoda, $Cena, $Vrsta, $Velicina, $con);
+    
     confirm($result);
     $_SESSION['messageSuccess'] = 'Proizvod uspesno unet!';
     redirect("../usluge.php");

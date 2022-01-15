@@ -12,9 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $_SESSION['messageError'] = "Sva polja moraju biti popunjena!";
         redirect("../usluge.php");
     }
-    $sql = "UPDATE oprema set naziv='$NazivProizvoda', cena='$Cena', vrstaId='$Vrsta', velicinaId='$Velicina' where  opremaId='$id'";
-    alert($sql);
-    $result = query($sql);
+   include("../proizvod.php");
+    $proizvod = new Proizvod();
+    $result = $proizvod->izmeniProizvod($id, $NazivProizvoda, $Cena, $Vrsta, $Velicina, $con);
     confirm($result);
     $_SESSION['messageSuccess'] = 'Proizvod uspesno izmenjen!';
     redirect("../usluge.php");
